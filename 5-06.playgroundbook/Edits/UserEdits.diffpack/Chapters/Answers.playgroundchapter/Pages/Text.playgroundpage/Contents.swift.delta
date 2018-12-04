@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// Created on December 3
+// Created by Nicholas Pasco-Arnone
+// Created for ICS3U
+// This program converts letters to hexadecimal
+
+var charactersDictionary : [String: String] = [
+    "A" : "41","B" : "42","C" : "43","D" : "44", "E" : "45", "F" : "46",  "G" : "47", "H" : "48", "I" : "49",  "J" : "4A",  "K" : "4B",  "L" : "4C",  "M" : "4D",  "N" : "4E",  "O" : "4F",  "P" : "50",  "Q" : "51",  "R" : "52",  "S" : "53",  "T" : "54",  "U" : "55",  "V" : "56", "W" : "57", "X" : "58", "Y" : "59",  "Z" : "5A", "a": "61", "b": "62", "c": "63", "d": "64", "e": "65", "f": "66", "g": "67", "h": "68", "i": "69", "j": "6a", "k": "6b", "l": "6c", "m": "6d", "n": "6e", "o": "6f", "p": "70", "q": "71", "r": "72", "s": "73", "t": "74", "u": "75", "v": "76", "w": "77", "x": "78", "y": "79", "z": "7a" ]
+
+func convertString(wordSent : String, dictionarySent : [String : String]) -&gt; String {
+    var allCharacters : String = ""
+    
+    var charactersEntered = Array(wordSent)
+    
+    for counter in 1 ... charactersEntered.count {
+        
+        var characterAsHex : String = charactersDictionary[String(charactersEntered[counter - 1])]!
+        allCharacters = allCharacters + " " + characterAsHex
+    }
+    
+    return allCharacters
+}
+
+let wordEntered = ask("Enter string")
+
+
+show(convertString(wordSent: wordEntered, dictionarySent: charactersDictionary))
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{145, 1353}</string>
+			<key>OriginalContent</key>
+			<string>show("What is your name?")
+
+let name = ask("Name")
+
+show("Hi " + name)
+</string>
+			<key>OriginalRange</key>
+			<string>{145, 71}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Answers.playgroundchapter/Pages/Text.playgroundpage/Contents.swift</string>
+</dict>
+</plist>
